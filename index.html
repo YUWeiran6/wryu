@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weiran Yu | ESG Finance & Climate Research</title>
+  <meta name="description" content="Personal academic website of Weiran Yu, focusing on ESG finance, sustainable investment, carbon markets, and climate governance." />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+      background: rgba(248, 250, 252, 0.9);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e2e8f0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+      color: #475569;
+    }
+
+    .nav-links a:hover {
+      color: #059669;
+    }
+
+    .hero {
+      padding: 88px 0 72px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: #d1fae5;
+      color: #047857;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -0.06em;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      color: #475569;
+      font-size: 19px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: #0f172a;
+      color: #fff;
+    }
+
+    .button.secondary {
+      border: 1px solid #cbd5e1;
+      background: #fff;
+      color: #0f172a;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+    }
+
+    .profile-card {
+      background: #fff;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    }
+
+    .photo-placeholder {
+      aspect-ratio: 1 / 1;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #d1fae5, #dbeafe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #047857;
+      font-weight: 800;
+      font-size: 42px;
+    }
+
+    .profile-list {
+      margin-top: 24px;
+      color: #475569;
+      font-size: 15px;
+    }
+
+    .profile-list p {
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 54px 0;
+    }
+
+    h2 {
+      font-size: 30px;
+      letter-spacing: -0.04em;
+      margin-bottom: 22px;
+    }
+
+    .section-text {
+      max-width: 880px;
+      color: #475569;
+      font-size: 17px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+      border: 1px solid #eef2f7;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .card p {
+      color: #475569;
+      font-size: 15px;
+    }
+
+    .experience {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .contact-box {
+      background: #0f172a;
+      color: #fff;
+      border-radius: 28px;
+      padding: 42px;
+      margin-bottom: 60px;
+    }
+
+    .contact-box p {
+      color: #cbd5e1;
+      max-width: 740px;
+      margin-bottom: 24px;
+    }
+
+    footer {
+      padding: 28px 0 44px;
+      color: #64748b;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 56px;
+      }
+
+      .grid,
+      .grid.two {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="#">Weiran Yu</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="tag">ESG Finance · Sustainable Investment · Climate Policy</span>
+        <h1>Weiran Yu</h1>
+        <p>
+          Master of Global Management candidate at The University of Hong Kong, focusing on ESG, sustainable finance, carbon markets, and corporate climate governance.
+        </p>
+        <div class="buttons">
+          <a class="button primary" href="mailto:your.email@example.com">Contact Me</a>
+          <a class="button secondary" href="cv.pdf" target="_blank">Download CV</a>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <div class="photo-placeholder">WY</div>
+        <div class="profile-list">
+          <p><strong>Affiliation:</strong> HKU Business School</p>
+          <p><strong>Location:</strong> Hong Kong / Global</p>
+          <p><strong>Focus:</strong> ESG & Climate Finance Research</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p class="section-text">
+        I am interested in how firms, financial institutions, and governments respond to climate-related risks and sustainability disclosure requirements. My current research interests include carbon pricing mechanisms, ESG ratings, sustainable investment, corporate climate governance, and the financial implications of environmental policy.
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Carbon Finance</h3>
+          <p>Carbon pricing, emissions trading systems, climate policy design, and firm-level responses.</p>
+        </div>
+        <div class="card">
+          <h3>ESG Ratings</h3>
+          <p>Rating disagreement, ESG credibility, disclosure quality, and capital market reactions.</p>
+        </div>
+        <div class="card">
+          <h3>Corporate Climate Governance</h3>
+          <p>Climate risk management, green innovation, sustainability reporting, and board-level governance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Selected Experience</h2>
+      <div class="experience">
+        <div class="card">
+          <h3>Teaching and Programme Support, HKU Business School</h3>
+          <p>Assisted with ESG-related courses, student communication, assessment coordination, and academic programme operations.</p>
+        </div>
+        <div class="card">
+          <h3>ESG Reporting and Climate Governance Projects</h3>
+          <p>Worked on sustainability reporting, double materiality assessment, climate scenario analysis, carbon accounting, and ESG disclosure benchmarking.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Working Papers & Projects</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Institutional Drivers of Carbon Pricing Mechanisms</h3>
+          <p>A cross-country study examining why countries differ in adopting and tightening carbon pricing policies.</p>
+        </div>
+        <div class="card">
+          <h3>ESG Rating Credibility and Capital Market Reactions</h3>
+          <p>Exploring how investors interpret ESG signals, rating changes, and climate commitment credibility.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-box">
+        <h2>Contact</h2>
+        <p>
+          I welcome conversations about sustainable finance, ESG disclosure, climate policy, and PhD research opportunities.
+        </p>
+        <div class="buttons">
+          <a class="button secondary" href="mailto:your.email@example.com">your.email@example.com</a>
+          <a class="button secondary" href="#" target="_blank">Google Scholar / LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Weiran Yu. All rights reserved.
+  </footer>
+</body>
+</html>
